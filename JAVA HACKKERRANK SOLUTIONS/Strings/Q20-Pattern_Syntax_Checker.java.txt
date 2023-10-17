@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
+
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int loop = s.nextInt();
+        s.nextLine();
+        while(loop--!=0){
+            String str = s.nextLine();
+            boolean isValid = checkIsValid(str);
+            System.out.println(isValid ? "Valid":"Invalid"); 
+        }
+    }
+    public static boolean checkIsValid(String str){
+        try{
+            Pattern.compile(str);
+            return true;
+        }catch(PatternSyntaxException e){
+            return false;
+        }
+    }
+}

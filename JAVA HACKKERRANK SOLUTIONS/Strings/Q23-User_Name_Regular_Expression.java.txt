@@ -1,0 +1,15 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int a = Integer.parseInt(s.nextLine());
+        String regex = "^[a-zA-Z]{1}[a-zA-Z_0-9]{7,29}$";
+        while (a-- != 0) {
+            String in = s.nextLine();
+            System.out.println(in.matches(regex) ? "Valid" : "Invalid");
+        }
+    }
+}

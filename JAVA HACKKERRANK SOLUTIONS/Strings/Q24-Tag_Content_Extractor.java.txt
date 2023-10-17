@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int l = sc.nextInt();
+        sc.nextLine();
+        String regex = "<([^<>/]+)>([^<>]+)</(\\1)>";
+        Pattern pattern = Pattern.compile(regex);
+        while(l-->0){
+            String s = sc.nextLine();
+            Matcher matcher = pattern.matcher(s);
+            if(matcher.find()) {
+    System.out.println(matcher.group(2));
+    while(matcher.find()) {
+        System.out.println(matcher.group(2));
+    }
+} else {
+    System.out.println("None");
+}           
+            
+        }
+    }
+}

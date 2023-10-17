@@ -1,0 +1,15 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        try{
+        int a=s.nextInt();
+        System.out.println(String.valueOf("Good job"));
+        }catch(Exception e){
+           System.out.println("Wrong answer"); 
+        }
+    }
+}
